@@ -1,9 +1,9 @@
-name: "deploy pages"
+name: "deploy pages two"
 
-on: workflow_dispatch
+on: [workflow_dispatch]
 
 jobs:
-  deploy_pages:
+  deploy_pages_two:
     name: "deploy pages",
     runs-on: "ubuntu-latest"
     steps:
