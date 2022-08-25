@@ -1,6 +1,7 @@
 name: "deploy pages"
 
-on: [workflow_dispatch]
+on:
+  - workflow_dispatch
 
 jobs:
   deploy_pages:
