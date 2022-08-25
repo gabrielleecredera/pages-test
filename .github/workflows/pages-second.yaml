@@ -8,6 +8,8 @@ jobs:
     name: "deploy pages"
     runs-on: "ubuntu-latest"
     steps:
+      - name: "Checkout"
+        uses: actions/checkout@v3
       - name: "Publish report to GH pages"
         uses: sede-open/github-pages-deploy-action@4.1.4
         with:
