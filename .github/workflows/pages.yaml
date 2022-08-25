@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy_pages:
-    name: "deploy pages",
+    name: "deploy pages"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Publish report to GH pages"
