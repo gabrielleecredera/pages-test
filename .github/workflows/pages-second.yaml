@@ -9,7 +9,7 @@ jobs:
     runs-on: "ubuntu-latest"
     steps:
       - name: "Publish report to GH pages"
-          uses: sede-open/github-pages-deploy-action@4.1.4
-          with:
-            branch: pages
-            folder: another-test-folder
+        uses: sede-open/github-pages-deploy-action@4.1.4
+        with:
+          branch: pages
+          folder: another-test-folder
