@@ -13,7 +13,7 @@ jobs:
           status: custom
           custom_payload: |
             {
-              text: "*E2E testing succeeded* :rocket:",
+              text: 'a' !== 'b' ? '*E2E testing succeeded* :rocket:' : 'test',
               attachments: [{
                 "color": '#009933',
                 "blocks": [
