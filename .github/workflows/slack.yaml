@@ -1,0 +1,40 @@
+name: "slack test"
+
+on:
+  - workflow_dispatch
+
+jobs:
+  slack:
+    name: "slack"
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: 8398a7/action-slack@v3
+        with:
+          status: custom
+          custom_payload: |
+            {
+              attachments: [{
+                "color": '#009933',
+                "blocks": [
+                  {
+                    "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": "*E2E testing succeeded* :rocket:"
+                    },
+                    "accessory": {
+                      "type": "button",
+                      "text": {
+                        "type": "plain_text",
+                        "emoji": true,
+                        "text": "View Report"
+                      },
+                      "url": "https://www.google.com"
+                    }
+                  }
+                ]
+              }]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
+        if: always() # Pick up events even if the job fails or is canceled.
