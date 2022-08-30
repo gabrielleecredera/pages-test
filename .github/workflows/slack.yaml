@@ -19,6 +19,10 @@ jobs:
                 "blocks": [
                   {
                     "type": "section",
+                    "text": {
+                      "type": "mrkdwn",
+                      "text": " "
+                    },
                     "accessory": {
                       "type": "button",
                       "text": {
