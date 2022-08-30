@@ -11,6 +11,7 @@ jobs:
       - uses: 8398a7/action-slack@v3
         with:
           status: custom
+          text: "*E2E testing succeeded* :rocket:"
           custom_payload: |
             {
               attachments: [{
