@@ -12,30 +12,30 @@ jobs:
         with:
           status: custom
           text: "*E2E testing succeeded* :rocket:"
-          custom_payload: |
-            {
-              attachments: [{
-                "color": '#009933',
-                "blocks": [
-                  {
-                    "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "*E2E testing succeeded* :rocket:"
-                    },
-                    "accessory": {
-                      "type": "button",
-                      "text": {
-                        "type": "plain_text",
-                        "emoji": true,
-                        "text": "View Report"
-                      },
-                      "url": "https://www.google.com"
-                    }
-                  }
-                ]
-              }]
-            }
+#          custom_payload: |
+#            {
+#              attachments: [{
+#                "color": '#009933',
+#                "blocks": [
+#                  {
+#                    "type": "section",
+#                    "text": {
+#                      "type": "mrkdwn",
+#                      "text": "*E2E testing succeeded* :rocket:"
+#                    },
+#                    "accessory": {
+#                      "type": "button",
+#                      "text": {
+#                        "type": "plain_text",
+#                        "emoji": true,
+#                        "text": "View Report"
+#                      },
+#                      "url": "https://www.google.com"
+#                    }
+#                  }
+#                ]
+#              }]
+#            }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # required
         if: always() # Pick up events even if the job fails or is canceled.
