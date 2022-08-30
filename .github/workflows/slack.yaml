@@ -19,10 +19,6 @@ jobs:
                 "blocks": [
                   {
                     "type": "section",
-                    "text": {
-                      "type": "mrkdwn",
-                      "text": "*E2E testing succeeded* :rocket:"
-                    },
                     "accessory": {
                       "type": "button",
                       "text": {
